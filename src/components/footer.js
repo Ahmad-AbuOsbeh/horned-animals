@@ -4,7 +4,7 @@ class Footer extends React.Component{
     render(){
         return(
             <footer>
-                Ahmad Abu Osbeh
+               Author: Ahmad Abu Osbeh
             </footer>
         )
     }
