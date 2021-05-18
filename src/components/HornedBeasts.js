@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 class HornedBeasts extends React.Component {
 
@@ -8,6 +9,7 @@ class HornedBeasts extends React.Component {
         super(props)
         this.state = {
             counter: 0
+            
         }
     }
 
@@ -18,6 +20,11 @@ class HornedBeasts extends React.Component {
             }
         )
     }
+
+    prop3Function=()=>{
+        this.props.prop2Function();
+    }
+
     render() {
         return (
             <div>
@@ -37,6 +44,7 @@ class HornedBeasts extends React.Component {
                          <Card.Text>
                          favourit❤️:{this.state.counter}
                          </Card.Text>
+                         <Button onClick={this.prop3Function}  variant="primary">VOTE </Button>
                         {/* <Card.Link href="#">Card Link</Card.Link>
                         <Card.Link href="#">Another Link</Card.Link> */}
                     </Card.Body>

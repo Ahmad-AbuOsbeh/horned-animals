@@ -69,6 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+# lab 02
 ## feature number 1
 Number and name of feature: feature number one, display images
 
@@ -101,3 +102,16 @@ Start time: 10:55
 Finish time: 11:30
 
 Actual time needed to complete: 35 min
+
+## lab 03 
+## feature number 1
+Number and name of feature: feature number one, display modal images
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 1:35 PM
+
+Finish time: 
+
+Actual time needed to complete: 
+

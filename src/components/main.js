@@ -1,23 +1,40 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import hornedData from './hornedData.json';
+// import SelectedBeast from './SelectedBeast ';
 
 class Main extends React.Component{
+    
+
+    prop1Function=()=>{
+        this.props.functionProp();
+    }
+    
+   
     render(){
         return(
            <>
+           
            {
-               hornedData.map(item=>{
+               this.props.hornedDataMain.map(item=>{
                    return(
+                       <>
                        <HornedBeasts 
                        title={item.title}
                        imgSrc={item.image_url}
                        description={item.description}
-
+                       prop2Function={this.prop1Function}
+                       
+                       
                        />
+                       {/* <button onClick={this.prop1Function}>Voteee</button> */}
+                       
+                      
+                       </>
                    )
                })
            }
+           {/* <p>{this.props.propName}</p> */}
+           
            </>  
           
         )
