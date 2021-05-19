@@ -5,6 +5,7 @@ import Footer from './components/footer.js';
 import React from 'react';
 import hornedDataApp from './components/hornedData.json';
 import SelectedBeast from './components/SelectedBeast ';
+import HornedBeasts from './components/HornedBeasts';
 
 
 class App extends React.Component{
@@ -14,19 +15,37 @@ class App extends React.Component{
     this.state={
       
         hornedData:hornedDataApp,
-        SelectedBeastContentFromState:'hello from states and props'
+        SelectedBeastContentFromState: '',
+        SelectedBeastContentFromState2: '',
+        SelectedBeastContentFromState3: '',
+        runModalCheck:0
+
+
 
     }
 }
+// modalShowFunction=()=>{
+         
+// }
+     
 
-    changingStateDataFunction=()=>{
+    changingStateDataFunction=(selectedData,selectedData2,selectedData3)=>{
 
-      this.setState=(
+    //  let newArr= HornedBeasts.find(element=> element.horns===2)
+
+      this.setState(
         {
-          SelectedBeastContentFromState:this.state.SelectedBeastContentFromState+"yes i did changing data"
+          SelectedBeastContentFromState: selectedData,
+          SelectedBeastContentFromState2:selectedData2,
+          SelectedBeastContentFromState3:selectedData3,
+          runModalCheck:1
         }
       )
+      // this.modalShowFunction()
+      
+
     }
+
 
  
 
@@ -35,7 +54,7 @@ class App extends React.Component{
       <>
          <Header></Header>
          <Main hornedDataMain={this.state.hornedData} functionProp={this.changingStateDataFunction}></Main>
-         <SelectedBeast SelectedBeastContent={this.state.SelectedBeastContentFromState}> </SelectedBeast>
+         <SelectedBeast SelectedBeastContent={this.state.SelectedBeastContentFromState} SelectedBeastContent2={this.state.SelectedBeastContentFromState2} SelectedBeastContent3={this.state.SelectedBeastContentFromState3} modalShowFunction={this.modalShowFunction}> </SelectedBeast>
          <Footer></Footer>
       </>
     
