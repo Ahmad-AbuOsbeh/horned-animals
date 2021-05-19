@@ -5,8 +5,10 @@ import HornedBeasts from './HornedBeasts';
 class Main extends React.Component{
     
 
-    prop1Function=()=>{
-        this.props.functionProp();
+    prop1Function=(selectedData,selectedData2,selectedData3)=>{
+        this.props.functionProp(selectedData,selectedData2,selectedData3);
+        
+        
     }
     
    
@@ -22,8 +24,8 @@ class Main extends React.Component{
                        title={item.title}
                        imgSrc={item.image_url}
                        description={item.description}
-                       prop2Function={this.prop1Function}
-                       
+                       prop2Function={()=>this.prop1Function(item.title,item.image_url,item.description)}
+                    //    selectedData={this}
                        
                        />
                        {/* <button onClick={this.prop1Function}>Voteee</button> */}
