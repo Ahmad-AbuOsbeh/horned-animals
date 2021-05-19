@@ -18,7 +18,7 @@ class App extends React.Component{
         SelectedBeastContentFromState: '',
         SelectedBeastContentFromState2: '',
         SelectedBeastContentFromState3: '',
-        runModalCheck:0
+        show:false
 
 
 
@@ -27,7 +27,9 @@ class App extends React.Component{
 // modalShowFunction=()=>{
          
 // }
-     
+handleClose = () => {
+  this.setState({ show: false })
+}
 
     changingStateDataFunction=(selectedData,selectedData2,selectedData3)=>{
 
@@ -38,7 +40,7 @@ class App extends React.Component{
           SelectedBeastContentFromState: selectedData,
           SelectedBeastContentFromState2:selectedData2,
           SelectedBeastContentFromState3:selectedData3,
-          runModalCheck:1
+          show:true
         }
       )
       // this.modalShowFunction()
@@ -53,8 +55,8 @@ class App extends React.Component{
     return (
       <>
          <Header></Header>
-         <Main hornedDataMain={this.state.hornedData} functionProp={this.changingStateDataFunction}></Main>
-         <SelectedBeast SelectedBeastContent={this.state.SelectedBeastContentFromState} SelectedBeastContent2={this.state.SelectedBeastContentFromState2} SelectedBeastContent3={this.state.SelectedBeastContentFromState3} modalShowFunction={this.modalShowFunction}> </SelectedBeast>
+         <Main hornedDataMain={this.state.hornedData} functionProp={this.changingStateDataFunction} ></Main>
+         <SelectedBeast SelectedBeastContent={this.state.SelectedBeastContentFromState} SelectedBeastContent2={this.state.SelectedBeastContentFromState2} SelectedBeastContent3={this.state.SelectedBeastContentFromState3} modalShowFunction={this.state.show} handleClose={this.handleClose} > </SelectedBeast>
          <Footer></Footer>
       </>
     
