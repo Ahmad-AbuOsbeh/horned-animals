@@ -21,8 +21,8 @@ class HornedBeasts extends React.Component {
         )
     }
 
-    prop3Function=(para1,para2,para3)=>{
-        this.props.prop2Function(para1,para2,para3);
+    prop3Function=()=>{
+        this.props.prop2Function();
         
     }
 
@@ -45,7 +45,7 @@ class HornedBeasts extends React.Component {
                          <Card.Text>
                          favourit❤️:{this.state.counter}
                          </Card.Text>
-                         <Button onClick={()=>this.prop3Function(555,77,88)}  variant="primary">VOTE </Button>
+                         <Button onClick={this.prop3Function}  variant="primary">VOTE </Button>
                         {/* <Card.Link href="#">Card Link</Card.Link>
                         <Card.Link href="#">Another Link</Card.Link> */}
                     </Card.Body>

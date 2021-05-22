@@ -56,6 +56,7 @@ handleClose = () => {
       <>
          <Header></Header>
          <Main hornedDataMain={this.state.hornedData} functionProp={this.changingStateDataFunction} ></Main>
+         
          <SelectedBeast SelectedBeastContent={this.state.SelectedBeastContentFromState} SelectedBeastContent2={this.state.SelectedBeastContentFromState2} SelectedBeastContent3={this.state.SelectedBeastContentFromState3} modalShowFunction={this.state.show} handleClose={this.handleClose} > </SelectedBeast>
          <Footer></Footer>
       </>
