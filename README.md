@@ -111,7 +111,19 @@ Estimate of time needed to complete: 4 hours
 
 Start time: 1:35 PM
 
-Finish time: 
+Finish time: 6:00 am
 
-Actual time needed to complete: 
+Actual time needed to complete: 13 hours
+
+## lab 04
+## feature number 1
+Number and name of feature: feature number one, select from form number of hornes to be rendered.
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 4:40 PM
+
+Finish time: 6:10 am
+
+Actual time needed to complete: 1.5 hours
 
