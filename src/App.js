@@ -5,7 +5,7 @@ import Footer from './components/footer.js';
 import React from 'react';
 import hornedDataApp from './components/hornedData.json';
 import SelectedBeast from './components/SelectedBeast ';
-import HornedBeasts from './components/HornedBeasts';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends React.Component{
