@@ -5,7 +5,7 @@ import Footer from './components/footer.js';
 import React from 'react';
 import hornedDataApp from './components/hornedData.json';
 import SelectedBeast from './components/SelectedBeast ';
-import HornedBeasts from './components/HornedBeasts';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends React.Component{
@@ -56,6 +56,7 @@ handleClose = () => {
       <>
          <Header></Header>
          <Main hornedDataMain={this.state.hornedData} functionProp={this.changingStateDataFunction} ></Main>
+         
          <SelectedBeast SelectedBeastContent={this.state.SelectedBeastContentFromState} SelectedBeastContent2={this.state.SelectedBeastContentFromState2} SelectedBeastContent3={this.state.SelectedBeastContentFromState3} modalShowFunction={this.state.show} handleClose={this.handleClose} > </SelectedBeast>
          <Footer></Footer>
       </>

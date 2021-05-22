@@ -21,23 +21,19 @@ class HornedBeasts extends React.Component {
         )
     }
 
-    prop3Function=(para1,para2,para3)=>{
-        this.props.prop2Function(para1,para2,para3);
+    prop3Function=()=>{
+        this.props.prop2Function();
         
     }
 
     render() {
         return (
-            <div>
-                {/* <h2>{this.props.title}</h2>
-                <img onClick={this.favouriteCounter} src={this.props.imgSrc} alt={this.props.imgAlt} title={this.props.imgTitle}></img>
-                <p>{this.props.description}</p>
-                <p>favourit❤️:{this.state.counter}</p> */}
-
-                <Card style={{ width: '18rem' }}>
+            <>
+              
+                
+                <Card style={{ width: '18rem' }} className="text-center">
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
-                        {/* <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle> */}
                         <Card.Img onClick={this.favouriteCounter}  src={this.props.imgSrc}/>
                         <Card.Text>
                         {this.props.description}
@@ -45,14 +41,14 @@ class HornedBeasts extends React.Component {
                          <Card.Text>
                          favourit❤️:{this.state.counter}
                          </Card.Text>
-                         <Button onClick={()=>this.prop3Function(555,77,88)}  variant="primary">VOTE </Button>
-                        {/* <Card.Link href="#">Card Link</Card.Link>
-                        <Card.Link href="#">Another Link</Card.Link> */}
+                         <Button onClick={this.prop3Function}  variant="primary">VOTE </Button>
+                       
                     </Card.Body>
                 </Card>
+               
 
 
-            </div>
+            </>
         )
     }
 }
